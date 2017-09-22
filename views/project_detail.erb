@@ -1,0 +1,25 @@
+<h1> <%= @project.title %></h1>
+
+<p>
+  Welcome to the project detail page for <%= @project.title %>.
+
+<ul>Here you can:
+<li><a href="/project/<%= @project.id %>/edit">Edit Project</a></li>
+<li>Delete project</li>
+</ul>
+</p>
+
+
+
+
+
+
+
+<h3>Assign volunteers to this project</h3>
+
+<h4>Add a new volunteer</h4>
+<form action="/project_detail" method="post">
+  <label for="name">Name of new volunteer:</label>
+  <input id="name" name="name" type="text">
+  <button type="submit">Add volunteer</button>
+</form>
