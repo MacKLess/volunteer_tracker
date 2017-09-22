@@ -21,18 +21,18 @@ describe Project do
 #     end
 #   end
 #
-#   describe '#==' do
-#     it 'is the same project if two projects have the same title' do
-#       project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
-#       project2 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
-#       expect(project1 == project2).to eq true
-#     end
-#   end
-#
-#   context '.all' do
-#     it 'is empty to start' do
-#       expect(Project.all).to eq []
-#     end
+  describe '#==' do
+    it 'is the same project if two projects have the same title' do
+      project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      project2 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      expect(project1 == project2).to eq true
+    end
+  end
+
+  context '.all' do
+    it 'is empty to start' do
+      expect(Project.all).to eq []
+    end
 #
 #     it 'returns all projects' do
 #       project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
@@ -41,16 +41,16 @@ describe Project do
 #       project2.save
 #       expect(Project.all).to eq [project1, project2]
 #     end
-#   end
-#
-#   describe '#save' do
-#     it 'saves a project to the database' do
-#       project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
-#       project.save
-#       expect(Project.all).to eq [project]
-#     end
-#   end
-#
+  end
+
+  describe '#save' do
+    it 'saves a project to the database' do
+      project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      project.save
+      expect(Project.all).to eq [project]
+    end
+  end
+
 #   describe '.find' do
 #     it 'returns a project by id' do
 #       project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
