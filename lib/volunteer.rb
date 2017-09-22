@@ -36,5 +36,9 @@ class Volunteer
     end
   end
 
+  def project_id
+    @project_id
+  end
+
 
 end
