@@ -1,0 +1,22 @@
+<h1>Volunteer Projects</h1>
+
+<h3>Current projects</h3>
+
+<% if @projects.any?  %>
+<p>Click on a project to learn more about it:</p>
+<ul>
+  <% @projects.each do |project| %>
+    <li><a href="/projects/<%= project.id %>"><%= project.title %></a></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no projects yet!</p>
+<% end %>
+
+<h3>Submit a new project</h3>
+
+<form action="/" method="post">
+  <label for="title">Assign a title to the project:</label>
+  <input id="title" name="title" type="text">
+  <button type="submit">Create Project</button>
+</form>
