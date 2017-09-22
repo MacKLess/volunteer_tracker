@@ -55,7 +55,8 @@ class Project
     volunteers
   end
 
-
-
+  def id
+    @id
+  end  
 
 end
