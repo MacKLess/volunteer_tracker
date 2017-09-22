@@ -25,4 +25,13 @@ class Project
     project = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
     @id = project.first.fetch('id').to_i
   end
+
+  def self.find(id)
+    Project.all.each do |project|
+      if project.id == id
+        return project
+      end
+    end
+  end
+
 end
