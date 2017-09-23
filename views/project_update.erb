@@ -1,7 +1,21 @@
 <h1> <%= @project.title %></h1>
 
+<p>This is the edit page for the <%= @project.title %> edit page. Here you can edit the project title or you can delete it entirely.</p>
+
+<h3>Update Project Title:</h3>
+
   <form action="/project/<%= @project.id %>/edit" method="post">
     <label for="title">New title:</label>
     <input id="title" name="title" type="text" value="<%= @project.title %>">
     <button type="submit">Update Project</button>
   </form>
+
+<h3>Delete Project:</h3>
+
+  <p>Are you sure you want to delete this project?</p>
+  <form action="/project/<%= @project.id %>/edit" method="post">
+    <input name="_method" type="hidden" value="delete">
+    <button type="submit">Delete Project</button>
+  </form>
+
+<a href="/">Return to Mainpage</a>

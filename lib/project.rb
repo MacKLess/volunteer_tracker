@@ -40,7 +40,7 @@ class Project
   end
 
   def delete
-    DB.exec("DELETE FROM projects WHERE id = #{self.id()};")
+    DB.exec("DELETE FROM projects WHERE id = #{self.id};")
   end
 
   def volunteers
@@ -57,6 +57,6 @@ class Project
 
   def id
     @id
-  end  
+  end
 
 end

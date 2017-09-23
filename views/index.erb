@@ -6,7 +6,7 @@
 <p>Click on a project to learn more about it:</p>
 <ul>
   <% @projects.each do |project| %>
-    <li><a href="/projects/<%= project.id %>"><%= project.title %></a></li>
+    <li><a href="/project/<%= project.id %>"><%= project.title %></a></li>
   <% end %>
 </ul>
 <% else %>

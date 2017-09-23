@@ -1,25 +1,28 @@
 <h1> <%= @project.title %></h1>
 
-<p>
-  Welcome to the project detail page for <%= @project.title %>.
+<p>Welcome to the project detail page for <%= @project.title %>.
+Here you can edit the project or see volunteers affiliated with the project:</p>
+<h3><a href="/project/<%= @project.id %>/edit">Edit Project</a></h3>
 
-<ul>Here you can:
-<li><a href="/project/<%= @project.id %>/edit">Edit Project</a></li>
-<li>Delete project</li>
+<h3>Volunteers on this project</h3>
+
+<% if @volunteers.any? %>
+<p>Here are the volunteers working on this project:</p>
+<ul>
+  <% @volunteers.each do |volunteer| %>
+    <!-- <li><a href="/volunteer/<%= @volunteer.id %>"><%= @volunteer.name %></a></li> -->
+  <% end %>
 </ul>
-</p>
+<% else %>
+<p>There aren't any volunteers assigned to this project yet!</p>
+<% end %>
 
-
-
-
-
-
-
-<h3>Assign volunteers to this project</h3>
-
-<h4>Add a new volunteer</h4>
-<form action="/project_detail" method="post">
+<h3>Add a new volunteer</h3>
+<form action="/project/<%= @project.id %>/volunteer" method="post">
   <label for="name">Name of new volunteer:</label>
   <input id="name" name="name" type="text">
   <button type="submit">Add volunteer</button>
 </form>
+
+<br>
+<a href="/">Return to Mainpage</a>
