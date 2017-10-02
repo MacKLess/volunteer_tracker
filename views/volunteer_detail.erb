@@ -1,12 +1,5 @@
-<h1> <%= @volunteer.name %>  </h1>
+<h1><%= @volunteer.name %></h1>
 
 <p><%= @volunteer.name %> is an assigned volunteer for the following projects:</p>
-<% if @projects.any? %>
-  <ul>
-    <% @projects.each do |project| %>
-      <li><a href="/project/<%= project.id %>"><%= project.title %></a></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>This volunteer isn't assigned to any projects currently!</p>
-<% end %>
+
+<%= @project.title %>

@@ -6,15 +6,15 @@ Here you can edit the project or see volunteers affiliated with the project:</p>
 
 <h3>Volunteers on this project</h3>
 
-<% if @volunteers.any? %>
+<% if @project.volunteers.any? %>
 <p>Here are the volunteers working on this project:</p>
 <ul>
-  <% @volunteers.each do |volunteer| %>
-    <!-- <li><a href="/volunteer/<%= @volunteer.id %>"><%= @volunteer.name %></a></li> -->
+  <% @project.volunteers.each do |volunteer| %>
+    <li> <a href="/volunteer/<%= volunteer.id %>"><%= volunteer.name %></a></li>
   <% end %>
 </ul>
 <% else %>
-<p>There aren't any volunteers assigned to this project yet!</p>
+<p>Whoops! There aren't any volunteers assigned to this project yet! We better assign some below:</p>
 <% end %>
 
 <h3>Add a new volunteer</h3>
@@ -23,6 +23,3 @@ Here you can edit the project or see volunteers affiliated with the project:</p>
   <input id="name" name="name" type="text">
   <button type="submit">Add volunteer</button>
 </form>
-
-<br>
-<a href="/">Return to Mainpage</a>

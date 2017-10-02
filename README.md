@@ -10,13 +10,12 @@ _This app will allow the user (a non-profit employee) to track projects and asso
 
 ## Setup/Installation Requirements
 
-* _Clone to terminal from: _
-* _Open in your preferred browser_
-* _Create a database in SQL called 'volunteer_tracker'_
-* _Create tables for 'volunteers' and 'projects'_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Clone to terminal from: [github.com/MackLess/volunteer_tracker] (https://github.com/MacKLess/volunteer_tracker.git)_
+* _Make sure Postgres is installed and running ([instructions here](https://www.learnhowtoprogram.com/ruby/ruby-database-basics/installing-postgres-7fb0cff7-a0f5-4b61-a0db-8a928b9f67ef))_
+* _Create a database ```volunteer_tracker_development``` by running the command ```createdb -T template0 volunteer_tracker_development```_
+* _Run the command ```psql volunteer_tracker_development < my_database.sql``` in the project root directory_
+* _Run the command ```ruby app.rb``` in the project root directory_
+* _Open ```localhost:4567``` in your preferred web browser_
 
 ## Known Bugs
 
